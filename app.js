@@ -36,11 +36,28 @@ function SelectItem(all, ablock){
     return selectedDate.textContent
 }
 
+function getpInput() {
+    let phoneNum1 = document.getElementById("lname").value
+    if (phoneNum1 === '') {
+        phoneNum1 = null
+    }
+    return phoneNum1
+}
+
+function getnInput() {
+    let user = document.getElementById("fname").value
+    if (user === '') {
+        user = null
+    }
+    return user
+}
 
 get_dates()
 get_times()
 var selectedDate = SelectItem(datepoint, datepoint[0])
 var selectedTime = null
+var nameUser = null
+var phoneNum = null
 
 datepoint.forEach(id => {
     id.addEventListener('click', () =>
@@ -56,10 +73,14 @@ allTimes.forEach(id => {
 })
 
 finalSelection.addEventListener('click', () => {
-    if (selectedTime == null) {
-        console.log('You have not chosen a time yet')
+    phoneNum = getpInput()
+    nameUser = getnInput()
+    if (selectedTime === null || nameUser === null || phoneNum === null) {
+        console.log(nameUser + ' with phone number ' + phoneNum + ' have chosen ' + selectedTime + ' on ' + selectedDate)
+        alert('Please select time and fill in the your name and phone number.')
     } else {
-        console.log('You have chosen ' + selectedTime + ' on ' + selectedDate)
+        console.log(nameUser + ' with phone number ' + phoneNum + ' have chosen ' + selectedTime + ' on ' + selectedDate)
+        alert('Success!')
     }}
 )
 

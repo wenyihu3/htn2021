@@ -1,6 +1,6 @@
 body{
-    background-image: url("mainBackground.jpg");
-    font-family: "Trirong", serif;
+    background-color: rgb(134, 189, 241);
+    font-family: "Nunito";
 }
 
 .title {
