@@ -1,0 +1,47 @@
+body{
+    background-image: url("mainBackground.jpg");
+    font-family: "Trirong", serif;
+}
+
+.title {
+    text-align: center;
+    color: darkslategrey;
+}
+
+.intro{
+    text-align: center;
+    color: darkslategrey;
+}
+
+.introPic{
+    border-radius: 10px;
+}
+
+div.polaroid {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .book_button:link, .book_button:visited{
+      background-color: darkslategray;
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+  }
+
+  .book_button:hover, .book_button:active{
+      background-color: rgb(55, 91, 158);
+  }
