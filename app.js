@@ -1,6 +1,7 @@
 const times = document.querySelector(".grid")
 const datepoint = document.querySelectorAll(".dates")
-
+const allTimes = document.querySelectorAll(".square")
+const finalSelection = document.querySelector(".confirm")
 
 function get_dates() {
     let now = new Date() // current date
@@ -26,5 +27,39 @@ function get_times() {
     }
 }
 
+function SelectItem(all, ablock){
+    all.forEach(className => {
+        className.classList.remove('darker')
+    })
+    let selectedDate = ablock
+    selectedDate.classList.add('darker')
+    return selectedDate.textContent
+}
+
+
 get_dates()
 get_times()
+var selectedDate = SelectItem(datepoint, datepoint[0])
+var selectedTime = null
+
+datepoint.forEach(id => {
+    id.addEventListener('click', () =>
+        selectedDate = SelectItem(datepoint, id)
+    )
+    
+})
+
+allTimes.forEach(id => {
+    id.addEventListener('click', () =>
+        selectedTime = SelectItem(allTimes, id)
+    ) 
+})
+
+finalSelection.addEventListener('click', () => {
+    if (selectedTime == null) {
+        console.log('You have not chosen a time yet')
+    } else {
+        console.log('You have chosen ' + selectedTime + ' on ' + selectedDate)
+    }}
+)
+
