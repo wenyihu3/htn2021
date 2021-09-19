@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 280px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(132, 170, 214);
+    border-radius: 7px;
+    position: relative;
+    top: 50px;
+}
+
+.grid div {
+    height: 80px;
+}
+
+h3, h1 {
+    font-family: "Nunito";
+    text-align: center;
+}
+
+body {
+    background-color: rgb(51, 101, 148);
+}
+
+.date { 
+    background: rgb(196, 224, 255);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 30px;
+}
+
+.square {
+    background-color: rgb(196, 224, 255);
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date h3 {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none; 
+}
